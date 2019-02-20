@@ -1,4 +1,4 @@
-peline {
+pipeline {
     agent {
         docker {
             image 'openjdk:8-jre-alpine'
