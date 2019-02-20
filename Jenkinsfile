@@ -14,7 +14,9 @@ pipeline {
     stages {
 	def mvnHome
 	stage('Preparation') {
-	    mvnHome = tool 'M3'
+	    steps {
+		mvnHome = tool 'M3'
+	    }
 	}
         stage('Build') {
 	    steps {
