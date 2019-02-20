@@ -17,7 +17,7 @@ pipeline {
     	always {
             archiveArtifacts artifacts: 'target/*.war', fingerprint: true
 	    sh "docker build -t pik ."
-	    sh "docker run --rm -p 8888:8081 pik"
+	    sh "docker run --rm -p 8888:8080 pik"
 	}
     }
 };
