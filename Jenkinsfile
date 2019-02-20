@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'openjdk:8-jre-alpine'
+            image 'maven:latest'
             args '-p 3000:3000 -p 5000:5000' 
         }
     }
