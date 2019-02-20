@@ -12,15 +12,9 @@ pipeline {
         CI = 'true'
     }
     stages {
-	def mvnHome
-	stage('Preparation') {
-	    steps {
-		mvnHome = tool 'M3'
-	    }
-	}
         stage('Build') {
 	    steps {
-                sh "'${mvnHome}/bin/mvn' clean install"
+                sh "/usr/share/maven/bin/mvn clean install"
             }
         }
         stage('Test') {
