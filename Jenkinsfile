@@ -11,7 +11,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn install'
+		def mvnHome = tool 'M3'
+                sh '${mvnHome}/bin/mvn clean install'
             }
         }
         stage('Test') {
